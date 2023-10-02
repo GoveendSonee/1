@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../src/App.css";
 
+
 const ImageSlider = () => {
   const [images, setImages] = useState([
     { id: 1, src: 'image1.jpg', title: 'Title 1' },
@@ -9,6 +10,7 @@ const ImageSlider = () => {
     { id: 4, src: 'image4.jpg', title: 'Title 4' },
     { id: 5, src: 'image5.jpg', title: 'Title 5' },
   ]);
+    
 
   const [leftImages, setLeftImages] = useState(images);
   const [centerImage, setCenterImage] = useState(null);
