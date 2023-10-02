@@ -1,38 +1,48 @@
-.App {
+.image-slider-app img {
+  height: 5rem;
+  display: block;
+}
+
+.image-slider-app {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.image-slider-app .black-and-white {
+  filter: grayscale(100%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.image-slider-app .center-column img {
+  filter: grayscale(100%);
+  animation: colorize 4s ease forwards;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
+@keyframes colorize {
   to {
-    transform: rotate(360deg);
+    filter: grayscale(0%);
   }
 }
+
+.image-slider-app .image-column.center-column img {
+  height: 16rem;
+}
+
+.image-slider-app .image-column.center-column {
+  margin: auto 0;
+}
+
+.image-slider-app img{
+  transition: all 1s linear;
+}
+
+.image-slider-app .image-container {
+  text-align: center;
+  display: table;
+}
+
+.image-slider-app .image-container p {
+  margin: 6px 0 1.5rem;
+}
+
