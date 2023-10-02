@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../src/App.css";
 
 
+
 const ImageSlider = () => {
   const [images, setImages] = useState([
     { id: 1, src: 'image1.jpg', title: 'Title 1' },
@@ -83,5 +84,6 @@ const ImageSlider = () => {
     </div>
   );
 };
+
 
 export default ImageSlider;
