@@ -1,17 +1,15 @@
 import React, { useState, useEffect } from "react";
 import "../src/App.css";
 
-
-
 const ImageSlider = () => {
   const [images, setImages] = useState([
-    { id: 1, src: 'image1.jpg', title: 'Title 1' },
-    { id: 2, src: 'image2.jpg', title: 'Title 2' },
-    { id: 3, src: 'image3.jpg', title: 'Title 3' },
-    { id: 4, src: 'image4.jpg', title: 'Title 4' },
-    { id: 5, src: 'image5.jpg', title: 'Title 5' },
+    { id: 1, src: 'image1.jpg', title: 'Lemon Cane' },
+    { id: 2, src: 'image2.jpg', title: 'Plain Cane' },
+    { id: 3, src: 'image3.jpg', title: 'Ginger Cane' },
+    { id: 4, src: 'image4.jpg', title: 'Lemon Ginger' },
+    { id: 5, src: 'image5.jpg', title: 'Kokum Cane' },
+    { id: 6, src: 'image6.jpg', title: 'Jal Jeera Cane' },
   ]);
-    
 
   const [leftImages, setLeftImages] = useState(images);
   const [centerImage, setCenterImage] = useState(null);
@@ -29,12 +27,12 @@ const ImageSlider = () => {
 
           setTimeout(() => {
             setRightImages([...rightImages, imageToMove]);
-          }, 100); 
-        }, 2000);
+          }, 200); 
+        }, 3000); 
       } else {
         clearInterval(timer);
       }
-    }, 4000); 
+    }, 4000); // Adjust this time to control the overall slideshow speed
 
     return () => clearInterval(timer);
   }, [leftImages, rightImages]);
@@ -84,6 +82,5 @@ const ImageSlider = () => {
     </div>
   );
 };
-
 
 export default ImageSlider;
